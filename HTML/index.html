@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+<div class="row" style="width: 100vw !important; margin-left:-5vw;">
+  <div class="col-md-3" style="height:85vh;">
+      <div class="imagebox" style="height:100%; width:100%">
+          <a href="/lowFat">
+            <img src="{{ url_for('static', filename='images/lowfat.png') }}"  class="category-banner img-responsive" style="height:100%;width:100%">
+            <span class="imagebox-desc"><h3 class="hometitles">Low Fat</h3></span>
+          </a>
+      </div>
+  </div>
+  <div class="col-md-3" style="height:85vh;">
+      <div class="imagebox" style="height:100%; width:100%">
+          <a href="lowCarb">
+            <img src="{{ url_for('static', filename='images/lowcarb.png') }}"  class="category-banner img-responsive" style="height:100%;width:100%">
+            <span class="imagebox-desc"><h3 class="hometitles">Low Carb</h3></span>
+          </a>
+      </div>
+  </div>
+  <div class="col-md-3" style="height:85vh;">
+      <div class="imagebox" style="height:100%; width:100%">
+          <a href="highProtein">
+            <img src="{{ url_for('static', filename='images/highprotein.png') }}"  class="category-banner img-responsive" style="height:100%;width:100%">
+            <span class="imagebox-desc"><h3 class="hometitles">High Protein</h3></span>
+          </a>
+      </div>
+  </div>
+  <div class="col-md-3" style="height:85vh;">
+      <div class="imagebox" style="height:100%; width:100%">
+          <a href="balanced">
+            <img src="{{ url_for('static', filename='images/balanced.png') }}"  class="category-banner img-responsive" style="height:100%;width:100%">
+            <span class="imagebox-desc"><h3 class="hometitles">Balanced</h3></span>
+          </a>
+      </div>
+  </div>
+</div>
+{% endblock %}

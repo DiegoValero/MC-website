@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Personal Profile
+{% endblock %}
+
+{% block main %}
+<div class = "container">
+    <div class="col-md-6" >
+        <h1>Profile</h1>
+        <p>Username: {{ username }}</p>
+    </div>
+    <div class="col-md-6">
+        <h1>Favourite Recipes</h1>
+        <p> {{ username }} has {{ ammount }} favourite recipes. </p>
+
+       {% for info in verzameling %}
+        <div class="col-sm-6">
+            <div class="thumbnail">
+                <a href="recept?id={{ info.id }}">
+                    <img src="{{ info['image'] }}" style="padding-bottom: 22px" alt="image">
+                    <p>{{ info.label }}</p>
+                    <p>{{ info.popularity }} &hearts;</p>
+                </a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+
+{% endblock %}
